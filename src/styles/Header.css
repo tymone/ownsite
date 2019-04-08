@@ -1,0 +1,26 @@
+header{
+  position: relative;
+  background-image: url(../images/header.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0 auto;
+  height: 80vh;
+  background-color: #999;
+  text-align: center;
+}
+
+header h1{
+  position: absolute;
+  width: 100%;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px 0;
+  font-size: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
