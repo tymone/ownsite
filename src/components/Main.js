@@ -6,10 +6,6 @@ import css_logo from '../images/css_logo.png';
 import js_logo from '../images/js_logo.png';
 import react_logo from '../images/react_logo.png';
 import google_logo from '../images/google_logo.png';
-import swimm from '../images/swimming.jpg';
-import run from '../images/running.jpg';
-import bjj from '../images/bjj.jpg';
-import mountain from '../images/mountain.jpg';
 import printscr from '../images/printscreen.png';
 
 const Main = () => {
