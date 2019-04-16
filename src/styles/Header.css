@@ -5,6 +5,7 @@ header{
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
+  max-width: 1900px;
   margin: 0 auto;
   height: 80vh;
   background-color: #999;
