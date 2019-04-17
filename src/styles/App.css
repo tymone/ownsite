@@ -1,9 +1,14 @@
 *{
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   
 }
 body{
   background-color: #111;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
 }

@@ -1,14 +1,15 @@
 /* zrobić jeden rozmiar dla wszystkich img */
-
-.wrap{
-  position: relative;
-  width: 100%;
-  max-width: 1400px;
-  height: 600px;
-  top: 0;
-  left: 0;
+/* wciepać img z main.js jako bgc dla divów' */
+/* wjeżdżający content sekcji przez keyframes*/
+main p{
+  font-size: 30px;
+  padding: 0 40px;
+  font-family: Lato, sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 50px;
+  text-align: center;
 }
-
 h2{
   width: 100%;
   font-size: 50px;
@@ -19,117 +20,66 @@ h2{
   font-family: roboto, sans-serif;
   text-align: center
 }
-
-main p{
-  font-size: 30px;
-  padding: 0 40px;
-  font-family: Lato, sans-serif;
-  color: white;
-  letter-spacing: 1px;
-  line-height: 50px;
+section{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap div{
+  width: 50%;
   text-align: center;
-
 }
 .wrap .wrapLeft img{
-  width: 20%;
-  height: 20%;
-  padding-top: 20px;
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
 }
 .wrap .wrapRight img{
-  position: absolute;
-  display: block;
-  bottom: 8%;
-  left: 50%;
-  transform:translate(-50%, -30%);
+  display: inline-block;
   width: 400px;
-  height: 240px;
-  
+  margin-top: 20px;
 }
-
-.wrap .wrapLeft{
-  position: absolute;
-  padding: 0 20px;
-  top: 0px;
-  left: 0;
-  width: 50%;
-  text-align: center;
-}
-
-.wrap .wrapRight{
-  position: absolute;
-  padding: 0  20px;
-  top: 0;
-  right:0;
-  width: 50%;
-  height: 100%;
-}
-
 .project{
-  max-width: 1400px;
-  position: relative;
-  height: 500px;
-  margin-bottom: 50px;
+  text-align: center;
+  margin: 0 auto 30px;
 }
-
 .project h3 {
-  position: absolute;
-  left: 8%;
-  top: 5%;
-  width: 25%;
+  text-align:center;
   font-size: 40px;
-  line-height: 70px;
-  border-bottom: 2px solid white;
+  padding-bottom: 30px;
   color: white;
   font-family: roboto, sans-serif;
-  
 }
-
 .project p{
-  position: absolute;
-  top: 30%;
-  left: 5%;
+  float:left;
   width: 50%;
-  text-align: left;
 }
-
 .project img{
-  position: absolute;
-  width: 37%;
-  top: 30%;
-  right: 7%;
+  width: 40%;
 }
-
-.about{
-  max-width: 1400px;
-  
-  /* text-align: center; */
-  justify-content: space-around;
-}
-
 .about .pictures{
   display: flex;
   flex-wrap: wrap;
-  top: 10px;
-  left: 0;
-  max-width: 1400px;
+  justify-content: space-around;
   height: 800px;
-  justify-content: space-around;  
-  margin: 40px 0;
+  margin-top: 20px;
 }
 .about .pictures .item{
   position: relative;
-  width: 45%;
-  height: 40%;
+  width: 47%;
+  height: 42%;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-size: 100%;
+  background-size: 110%;
   transition: 2s;
 }
 .about .pictures .item:hover{
-  background-size: 140%;
+  background-size: 120%;
 }
-
-
 .about .pictures .item p{
   opacity: 0;
   transition: 2s;
@@ -141,12 +91,10 @@ main p{
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
-
 }
 .about .pictures .item:hover p{
   opacity:1;
 }
-
 .about .pictures .item:nth-of-type(1){
   background-image: url(../images/bjj.jpg);
 }
@@ -159,7 +107,105 @@ main p{
  .about .pictures .item:nth-of-type(4){
    background-image: url(../images/mountain.jpg);
 }
-
 .contact{
+  text-align: center;
+}
+.contact p{
+  display: inline-block;
   color: #fff;
+  margin: 0 4px;
+  transition: 1s;
+}
+
+.contact p:hover{
+  cursor: pointer;
+  color: #999;
+  letter-spacing: 2px;
+}
+@media(max-width: 1400px){
+  main p{
+    font-size: 27px;
+    padding: 0 20px;
+  }
+  .wrap{
+    justify-content: center;
+  }
+  .wrap div{
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .project h3{
+    font-size: 38px;
+    line-height: 50px;
+  }
+}
+
+@media(max-width: 1024px){
+  main p{
+    font-size: 24px;
+    padding: 0 20px;
+    color: white;
+    line-height: 35px;
+    text-align: center;
+  }
+  .wrap .wrapLeft img{
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+  }
+}
+
+@media(max-width: 768px){
+  .project p{
+    width: 100%;
+  }
+}
+@media(max-width: 425px){
+  h2{
+    width: 100%;
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 10px;
+  }
+  main p{
+    font-size: 20px;
+    padding: 10px;
+    line-height: 30px;
+  }
+  .wrap div{
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  .wrap .wrapLeft img{
+    width: 100px;
+    height: 100px;
+    margin: 10px 20px;
+  }
+  .wrap .wrapRight img{
+    display: inline-block;
+    width: 300px;
+    margin-top: 20px;
+  }
+  .project h3{
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+  .project img{
+    width: 80%;
+  }
+  .about .pictures{
+    margin-top: 10px;
+  }
+  .about .pictures .item{
+    width: 90%;
+    height: 23%;
+    transition: 2s;
+  }
+  .about .pictures .item p{
+    line-height: 30px;
+  }
 }

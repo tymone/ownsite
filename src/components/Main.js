@@ -27,7 +27,7 @@ const Main = () => {
         </div>
       </section>
       <h2>Moje projekty</h2>
-      <section className='project'>
+      <section className='project clearfix'>
         <h3>Portal Ratownika</h3>
         <p>Aktualnie zajmuję się projektem dla mojej obecnej pracy, póki co jest to projekt 'do szuflady' w celu rozwijania umiejętności programistycznych, gdzie wykorzystuję technologie takie jak: HTML5, CSS3(Sass), Java Script(ES6, React), Python(Flask), MongoDB. </p>
         <img src={printscr} alt="printscreen" />
@@ -53,7 +53,7 @@ const Main = () => {
       <h2>Kontakt</h2>
       <section className='contact'>
         <p><i class="fas fa-mobile-alt"></i> 509-767-794</p>
-        <p><i class="far fa-envelope"></i> mail</p>
+        <p><i class="far fa-envelope"></i> tymoteusz.hryniewiecki@gmail.com</p>
         <p><i class="fab fa-facebook-square"></i> facebook</p>
         <p><i class="fab fa-linkedin"></i> linkedin</p>
       </section>
