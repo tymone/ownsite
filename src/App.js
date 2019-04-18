@@ -9,12 +9,12 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
-      <body>
+      <div className='App'>
         <Header />
         <Nav />
         <Main />
         <Footer />
-      </body>
+      </div>
     );
   }
 }

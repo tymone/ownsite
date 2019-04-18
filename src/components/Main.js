@@ -52,10 +52,10 @@ const Main = () => {
       </section>
       <h2>Kontakt</h2>
       <section className='contact'>
-        <p><i class="fas fa-mobile-alt"></i> 509-767-794</p>
-        <p><i class="far fa-envelope"></i> tymoteusz.hryniewiecki@gmail.com</p>
-        <p><i class="fab fa-facebook-square"></i> facebook</p>
-        <p><i class="fab fa-linkedin"></i> linkedin</p>
+        <p><i className="fas fa-mobile-alt"></i> 509-767-794</p>
+        <p><i className="far fa-envelope"></i> tymoteusz.hryniewiecki@gmail.com</p>
+        <p><i className="fab fa-facebook-square"></i> facebook</p>
+        <p><i className="fab fa-linkedin"></i> linkedin</p>
       </section>
     </main >
   )
