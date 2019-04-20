@@ -12,8 +12,8 @@ const Main = () => {
 
   return (
     <main>
-      <h2>Witam na mojej stronie</h2>
       <section className='wrap'>
+        <h2>Witam na mojej stronie</h2>
         <div className="wrapLeft">
           <p> Strona na której obecnie się znajdujesz jest w pełni responsywna na wszystkich urządzeniach, od małych ekranów smartfonów, po wysokiej rozdzielczości ekrany monitorów komputerowych. Nowoczesna i stworzona zgodnie z aktualnymi standardami z wykorzystaniem technologii takich jak:</p>
           <img src={html_logo} alt="html" />
@@ -26,14 +26,14 @@ const Main = () => {
           <img src={google_logo} alt="html" />
         </div>
       </section>
-      <h2>Moje projekty</h2>
       <section className='project clearfix'>
+        <h2>Moje projekty</h2>
         <h3>Portal Ratownika</h3>
         <p>Aktualnie zajmuję się projektem dla mojej obecnej pracy, póki co jest to projekt 'do szuflady' w celu rozwijania umiejętności programistycznych, gdzie wykorzystuję technologie takie jak: HTML5, CSS3(Sass), Java Script(ES6, React), Python(Flask), MongoDB. </p>
         <img src={printscr} alt="printscreen" />
       </section>
-      <h2>O mnie</h2>
       <section className='about'>
+        <h2>O mnie</h2>
         <p>Na codzień poza pracą na etacie jestem pasjonatem programowania oraz aktywnego trybu życia.</p>
         <div className="pictures">
           <div className="item">
@@ -50,10 +50,10 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <h2>Kontakt</h2>
       <section className='contact'>
+        <h2>Kontakt</h2>
         <p><i className="fas fa-mobile-alt"></i> 509-767-794</p>
-        <p><i className="far fa-envelope"></i> tymoteusz.hryniewiecki@gmail.com</p>
+        <a href={"mailto:" + 'tymoteusz.hryniewiecki@gmail.com'}><p><i className="far fa-envelope"></i> tymoteusz.hryniewiecki@gmail.com</p></a>
         <p><i className="fab fa-facebook-square"></i> facebook</p>
         <p><i className="fab fa-linkedin"></i> linkedin</p>
       </section>
