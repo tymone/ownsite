@@ -13,15 +13,25 @@ export default class Nav extends React.Component {
     $(document).on('scroll', function () {
       const scroll = $(document).scrollTop();
       const headerHigh = $('Header').height();
-      const nav = $('nav')
+      const nav = $('nav');
+      const ul = $('ul');
+      const li = $('li');
+      const i = $('li>i');
       if (scroll < headerHigh) {
-        nav.css('opacity', 1 - scroll / headerHigh)
+        // nav.css('opacity', 1 - scroll / headerHigh)
+        nav.removeClass('sideNav');
+        ul.removeClass('sideNav');
+        li.removeClass('sideNav');
+        i.removeClass('sideNav');
       } else {
-        nav.css('opacity', 0);
+        // nav.css('opacity', 0);
+        nav.addClass('sideNav');
+        ul.addClass('sideNav');
+        li.addClass('sideNav');
+        i.addClass('sideNav');
       }
     })
   }
-
 
   scrollOnSection1 = () => {
     $('body, html').animate({ scrollTop: $('.wrap').offset().top })
@@ -43,10 +53,10 @@ export default class Nav extends React.Component {
       <nav>
         <i className="fas fa-times" onClick={this.navbarFunc}></i>
         <ul>
-          <li onClick={this.scrollOnSection1} className="s1">Start</li>
-          <li onClick={this.scrollOnSection2}>Projekty</li>
-          <li onClick={this.scrollOnSection3}>O mnie</li>
-          <li onClick={this.scrollOnSection4}>Kontakt</li>
+          <li onClick={this.scrollOnSection1}><i class="fas fa-home"></i>Start</li>
+          <li onClick={this.scrollOnSection2}><i class="fas fa-project-diagram"></i>Projekty</li>
+          <li onClick={this.scrollOnSection3}><i class="fas fa-user-tie"></i> O mnie</li>
+          <li onClick={this.scrollOnSection4}><i class="fas fa-address-card"></i>Kontakt</li>
         </ul>
       </nav>
     )
