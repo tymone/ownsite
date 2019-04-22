@@ -4,41 +4,30 @@ nav{
   right: 50%;
   transform: translate(50%);
   width: 100%;
+  height: 100px;
   max-width: 1400px;
   z-index: 1;
+  
 }
 nav.sideNav{
   top:50%;
   right: 0;
   transform: translateY(-50%);
   width: 200px;
+  height: 200px;
   z-index: 1;
-}
-.fas.fa-times,
-.fa-home,
-.fa-project-diagram,
-.fa-user-tie,
-.fa-address-card
-{
-  display: none;
-}
-.fa-home.sideNav,
-.fa-project-diagram.sideNav,
-.fa-user-tie.sideNav,
-.fa-address-card.sideNav{
-  display: inline-block;
-  padding: 5px 20px 5px 5px;;
 }
 
 ul{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
   width: 70%;
-  margin: 40px auto;
+  height: 100%;
 }
 ul.sideNav{
   flex-direction: column;
-  width: 100%;
 }
 li{
   position: relative;
@@ -51,8 +40,17 @@ li{
   border: 1px solid white;
   padding:10px 10px;
   border-radius: 10px;
-  /* transition: .2s .4s; */
   cursor: pointer;
+}
+li.sideNav{
+  position: relative;
+  right: -140px;
+  width: 180px;
+  font-size: 20px;
+  cursor: pointer;
+}
+li.sideNav:hover{
+  right: -20px;
 }
 li:before{
   content: '';
@@ -80,16 +78,21 @@ li:hover{
 a{
   color: white;
 }
-li.sideNav{
-  position: relative;
-  right: -150px;
-  font-size: 20px;
-  cursor: pointer;
+.fas.fa-times,
+.fa-home,
+.fa-project-diagram,
+.fa-user-tie,
+.fa-address-card
+{
+  display: none;
 }
-li.sideNav:hover{
-  right: -10px;
+.fa-home.sideNav,
+.fa-project-diagram.sideNav,
+.fa-user-tie.sideNav,
+.fa-address-card.sideNav{
+  display: inline-block;
+  padding: 5px 20px 5px 5px;;
 }
-
 
 @media(max-width: 600px){
   nav{
@@ -103,22 +106,6 @@ li.sideNav:hover{
     height: 50%;
     opacity: .9;
     background-color: #000;
-  }
-  nav.active.sideNav{
-    left: 0;
-    top: 0;
-    width: 100%;
-    transform: translate(0%)
-  }
-  nav.sideNav {
-    position: fixed;
-    display: block;
-    top: 10px;
-    right: 10px;
-    width: 10%;
-    font-size: 40px;
-    color: #ddd;
-
   }
   ul{
     display: none;

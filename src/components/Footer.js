@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <p>Tymoteusz Hryniewiecki &copy; 2019</p>
+      <p>&copy; 2019 Tymoteusz Hryniewiecki </p>
     </footer>
   )
 }
