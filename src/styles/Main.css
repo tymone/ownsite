@@ -1,5 +1,4 @@
 /* zrobić jeden rozmiar dla wszystkich img */
-/* wciepać img z main.js jako bgc dla divów' */
 /* wjeżdżający content sekcji przez keyframes*/
 main p{
   font-size: 30px;
@@ -42,6 +41,27 @@ section{
   width: 400px;
   margin-top: 20px;
 }
+.wrap .wrapLeft img{
+  transition: 1s;
+}
+.wrap .wrapLeft img{
+transform: translateX(-100vw)
+}
+.wrap .wrapLeft img:nth-of-type(1){
+  transition: 1s .3s;
+}
+.wrap .wrapLeft img:nth-of-type(2){
+  transition: 1s .2s;
+}
+.wrap .wrapLeft img:nth-of-type(3){
+  transition: 1s .1s;
+}
+
+
+.wrap .wrapLeft img.scroll{
+  transform: translateX(0)
+}
+
 .project{
   text-align: center;
   margin: 0 auto 30px;
@@ -115,13 +135,13 @@ section{
   flex-basis: 49%;
   color: #fff;
   margin: 10px 4px;
-  transition: 1s;
+  
 }
 
 .contact p:hover{
   cursor: pointer;
   color: #999;
-  letter-spacing: 2px;
+  
 }
 @media(max-width: 1400px){
   main p{
@@ -157,9 +177,8 @@ section{
   }
   .contact p{
     flex-basis: 100%;
-    color: #fff;
     margin: 10px auto;
-    transition: 1s;
+    
   }
 }
 
@@ -218,8 +237,6 @@ section{
   .contact p{
     flex-basis: 100%;
     font-size: 16px;
-    color: #fff;
     margin: 1px auto;
-    transition: 1s;
   }
 }

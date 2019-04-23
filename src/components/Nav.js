@@ -1,3 +1,5 @@
+//poprawić IF'y w hideNav!
+
 import React from 'react';
 import '../styles/Nav.css';
 import $ from 'jquery';
