@@ -41,14 +41,14 @@ export default class Main extends React.Component {
         <section className='wrap'>
           <h2>Witam na mojej stronie</h2>
           <div className="wrapLeft">
-            <p> Strona na której obecnie się znajdujesz jest w pełni responsywna na wszystkich urządzeniach, od małych ekranów smartfonów, po wysokiej rozdzielczości ekrany monitorów komputerowych. Nowoczesna i stworzona zgodnie z aktualnymi standardami z wykorzystaniem technologii takich jak:</p>
+            <p> Strona na której obecnie się znajdujesz jest w pełni responsywna na wszystkich urządzeniach, od małych ekranów smartfonów, po wysokiej rozdzielczości ekrany monitorów komputerowych. Stworzona z wykorzystaniem technologii takich jak:</p>
             <img src={html_logo} alt="html" />
             <img src={css_logo} alt="css" />
             <img src={js_logo} alt="js" />
             <img src={react_logo} alt="react" />
           </div>
           <div className="wrapRight">
-            <p>Nowoczesna i stworzona zgodnie z aktualnymi standardami. Jest zoptymalizowana pod kątem wyszukiwarek internetowych.</p>
+            <p>Nowoczesna i zgodna z aktualnymi standardami. Jest zoptymalizowana pod kątem wyszukiwarek internetowych.</p>
             <img src={google_logo} alt="html" />
           </div>
         </section>
