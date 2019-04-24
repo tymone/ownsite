@@ -16,14 +16,21 @@ export default class Main extends React.Component {
   scroll = () => {
     $(document).on('scroll', function () {
       const scrollValue = $(this).scrollTop();
-      const img = $('.wrap .wrapLeft img')
-      const imgFromTop = img.offset().top
+      const img = $('.wrap .wrapLeft img');
+      const imgFromTop = img.offset().top;
+      const img2 = $('.wrap .wrapRight img');
+      const img2FromTop = img2.offset().top;
 
       if (scrollValue > imgFromTop / 2) {
         $('.wrap .wrapLeft img').addClass('scroll');
       }
+      if (scrollValue > img2FromTop - 500) {
+        $('.wrap .wrapRight img').addClass('scroll')
+      }
+
+
       if (scrollValue < 100) {
-        $('.wrap .wrapLeft img').removeClass('scroll');
+        $('.wrap .wrapLeft img, .wrap .wrapRight img').removeClass('scroll');
       }
     })
   }
