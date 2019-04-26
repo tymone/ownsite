@@ -84,14 +84,24 @@ section{
   margin-top: 20px;
 }
 .about .pictures .item{
-  position: relative;
+   position: relative;
   width: 47%;
   height: 42%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 110%;
-  transition: 2s;
+  transition: 1s;
+}
+.about .pictures .item:nth-of-type(even) {
+  transform: translateX(100vw)
+}
+.about .pictures .item:nth-of-type(odd){
+  transform: translateX(-100vw)
+}
+.about .pictures .item:nth-of-type(even).scroll,
+.about .pictures .item:nth-of-type(odd).scroll{
+  transform: translateX(0);
 }
 .about .pictures .item:hover{
   background-size: 120%;

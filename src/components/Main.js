@@ -1,5 +1,3 @@
-//scrolle do pozostałych img
-
 import React from 'react';
 import '../styles/Main.css';
 import $ from 'jquery';
@@ -20,17 +18,21 @@ export default class Main extends React.Component {
       const imgFromTop = img.offset().top;
       const img2 = $('.wrap .wrapRight img');
       const img2FromTop = img2.offset().top;
+      const img3 = $('.about .pictures .item')
+      const img3FromTop = img3.offset().top;
 
       if (scrollValue > imgFromTop / 2) {
         $('.wrap .wrapLeft img').addClass('scroll');
       }
       if (scrollValue > img2FromTop - 500) {
-        $('.wrap .wrapRight img').addClass('scroll')
+        $('.wrap .wrapRight img').addClass('scroll');
+      }
+      if (scrollValue > img3FromTop - 700) {
+        $('.about .pictures .item').addClass('scroll');
       }
 
-
       if (scrollValue < 100) {
-        $('.wrap .wrapLeft img, .wrap .wrapRight img').removeClass('scroll');
+        $('.wrap .wrapLeft img, .wrap .wrapRight img, .about .pictures .item').removeClass('scroll');
       }
     })
   }
@@ -38,6 +40,7 @@ export default class Main extends React.Component {
     this.scroll();
     return (
       <main>
+
         <section className='wrap'>
           <h2>Witam na mojej stronie</h2>
           <div className="wrapLeft">
@@ -55,8 +58,8 @@ export default class Main extends React.Component {
         <section className='project clearfix'>
           <h2>Moje projekty</h2>
           <h3>Portal Ratownika</h3>
-          <p>Aktualnie zajmuję się projektem dla mojej obecnej pracy, póki co jest to projekt 'do szuflady' w celu rozwijania umiejętności programistycznych, gdzie wykorzystuję technologie takie jak: HTML5, CSS3(Sass), Java Script(ES6, React), Python(Flask), MongoDB. </p>
-          <img src={printscr} alt="printscreen" />
+          <p>Aktualnie zajmuję się projektem dla mojej obecnej pracy, póki co jest to projekt 'do szuflady' w celu rozwijania umiejętności programistycznych, gdzie wykorzystuję technologie takie jak: HTML5, CSS3(Sass), Java Script(ES6, React), Python(Flask), MongoDB.(<strong>póki co link do repozytorium.</strong>) </p>
+          <a href='https://github.com/tymone/rescuer_portal'><img src={printscr} alt="printscreen" /></a>
         </section>
         <section className='about'>
           <h2>O mnie</h2>
@@ -78,11 +81,12 @@ export default class Main extends React.Component {
         </section>
         <section className='contact'>
           <h2>Kontakt</h2>
-          <p><i className="fas fa-mobile-alt"></i> 509-767-794</p>
-          <p><i className="far fa-envelope"></i> tymoteusz.hryniewiecki@gmail.com</p>
-          <p><i className="fab fa-facebook-square"></i> facebook</p>
-          <p><i className="fab fa-linkedin"></i> linkedin</p>
+          <p><a href='tel:509-767-794'><i className="fas fa-mobile-alt"></i> 509-767-794</a></p>
+          <p><a href='mailto:tymoteusz.hryniewiecki@gmail.com'><i className="far fa-envelope"></i> tymoteusz.hryniewiecki@gmail.com</a></p>
+          <p><a href='https://m.me/tymoteusz.hryniewiecki'><i className="fab fa-facebook-square"></i> facebook</a></p>
+          <p><a href='https://www.linkedin.com/in/tymoteusz-hryniewiecki/'><i className="fab fa-linkedin"></i> linkedin</a></p>
         </section>
+
       </main >
     )
   }
