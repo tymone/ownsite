@@ -1,24 +1,17 @@
-nav{
+nav {
   position: fixed;
-  top:0;
+  top: 0;
   right: 50%;
   transform: translate(50%);
   width: 100%;
-  height: 100px;
-  max-width: 1400px;
+  height: 70px;
   z-index: 1;
-  
 }
-nav.sideNav{
-  top:50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 200px;
-  height: 200px;
-  z-index: 1;
+nav.blackBgc {
+  background-color: #000;
 }
 
-ul{
+ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -26,102 +19,90 @@ ul{
   width: 70%;
   height: 100%;
 }
-ul.sideNav{
-  flex-direction: column;
-}
-li{
+
+li {
   position: relative;
   list-style: none;
   overflow: hidden;
-  color:white;
+  color: white;
   font-size: 20px;
   text-transform: uppercase;
   font-family: roboto, sans-serif;
   border: 1px solid white;
-  padding:10px 10px;
+  padding: 10px 10px;
   border-radius: 10px;
   cursor: pointer;
 }
-li.sideNav{
-  position: relative;
-  right: -140px;
-  width: 180px;
-  font-size: 20px;
-  cursor: pointer;
+nav.blackBgc ul li {
+  border: none;
 }
-li.sideNav:hover{
-  right: -20px;
-}
-li:before{
-  content: '';
+
+li:before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 2%;
   top: 50%;
   right: 100%;
   transform: translateY(-50%);
-  transition: height .1s .1s;
+  transition: height 0.1s 0.1s;
   background-color: #fff;
-  opacity: .7;
+  opacity: 0.7;
 }
 
-li:hover:before{
+li:hover:before {
   left: 0%;
   height: 100%;
   border-radius: 10px;
   z-index: -1;
-  opacity: .7;
+  opacity: 0.7;
 }
-li:hover{
+li:hover {
   color: black;
 }
-a{
+a {
   color: white;
 }
-.fas.fa-times,
+.fas.fa-times {
+  display: none;
+}
 .fa-home,
 .fa-project-diagram,
 .fa-user-tie,
-.fa-address-card
-{
-  display: none;
-}
-.fa-home.sideNav,
-.fa-project-diagram.sideNav,
-.fa-user-tie.sideNav,
-.fa-address-card.sideNav{
+.fa-address-card {
   display: inline-block;
-  padding: 5px 20px 5px 5px;;
+  padding: 5px 20px 5px 5px;
 }
 
-@media(max-width: 600px){
-  nav{
+@media (max-width: 909px) {
+  nav {
     position: fixed;
     height: 0;
-    transition: .6s;
+    transition: 0.6s;
   }
-  nav.active{
+  nav.active {
     position: fixed;
     width: 100%;
-    height: 50%;
-    opacity: .9;
+    height: 300px;
+    opacity: 0.9;
     background-color: #000;
   }
-  ul{
+
+  ul {
     display: none;
-    transition: .6s;
+    transition: 0.6s;
   }
-  ul.active{
+  ul.active {
     display: block;
   }
-  ul li.active{
+  ul li.active {
     margin: 20px 0;
     text-align: center;
     left: 0;
     opacity: 1;
   }
-  
-  .fas.fa-times{
+
+  .fas.fa-times {
     position: fixed;
     display: block;
     top: 10px;
@@ -129,7 +110,7 @@ a{
     font-size: 40px;
     color: #ddd;
   }
-  .fas.fa-times.active{
+  .fas.fa-times.active {
     color: #ddd;
   }
 }

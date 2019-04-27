@@ -1,4 +1,4 @@
-header{
+header {
   position: relative;
   background-image: url(../images/header.jpg);
   background-attachment: fixed;
@@ -7,11 +7,11 @@ header{
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  height: 80vh;
+  min-height: 80vh;
   text-align: center;
 }
 
-header h1{
+header h1 {
   position: absolute;
   width: 100%;
   top: 70%;
@@ -19,27 +19,26 @@ header h1{
   transform: translate(-50%, -50%);
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 3px;
   padding: 20px 0;
   font-size: 60px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media(max-width: 860px){
-  header h1{
+@media (max-width: 860px) {
+  header h1 {
     font-size: 50px;
-    
   }
 }
 
-@media(max-width: 375px){
-  header h1{
+@media (max-width: 375px) {
+  header h1 {
     font-size: 40px;
   }
 }
-@media(max-width: 425px){
-  header h1{
+@media (max-width: 425px) {
+  header h1 {
     font-size: 40px;
     letter-spacing: 1px;
   }
