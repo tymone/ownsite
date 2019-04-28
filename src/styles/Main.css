@@ -83,61 +83,52 @@ section {
   width: 40%;
 }
 .about .pictures {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  height: 800px;
-  margin-top: 20px;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 .about .pictures .item {
-  position: relative;
-  width: 47%;
-  height: 42%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 110%;
-  transition: 1s;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 98%;
 }
-.about .pictures .item:nth-of-type(even) {
-  transform: translateX(100vw);
+.about .pictures .item img {
+  display: block;
+  width: 50%;
+  height: 90%;
+  opacity: 0;
+  animation: image 16s linear infinite;
 }
-.about .pictures .item:nth-of-type(odd) {
-  transform: translateX(-100vw);
+
+.about .pictures .item:nth-of-type(2) img {
+  animation-delay: 4s;
 }
-.about .pictures .item:nth-of-type(even).scroll,
-.about .pictures .item:nth-of-type(odd).scroll {
-  transform: translateX(0);
+.about .pictures .item:nth-of-type(3) img {
+  animation-delay: 8s;
 }
-.about .pictures .item:hover {
-  background-size: 120%;
+.about .pictures .item:nth-of-type(4) img {
+  animation-delay: 12s;
 }
 .about .pictures .item p {
-  opacity: 0;
-  transition: 2s;
-  position: absolute;
-  font-family: roboto, sans-serif;
-  background-color: rgba(0, 0, 0, 0.6);
-  line-height: 60px;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
+  transform: translateX(130%);
+  width: 40%;
+  animation: text 16s linear infinite;
 }
-.about .pictures .item:hover p {
-  opacity: 1;
+.about .pictures .item:nth-of-type(2) p {
+  animation-delay: 4s;
 }
-.about .pictures .item:nth-of-type(1) {
-  background-image: url(../images/bjj.jpg);
+.about .pictures .item:nth-of-type(3) p {
+  animation-delay: 8s;
 }
-.about .pictures .item:nth-of-type(2) {
-  background-image: url(../images/swimming.jpg);
-}
-.about .pictures .item:nth-of-type(3) {
-  background-image: url(../images/running.jpg);
-}
-.about .pictures .item:nth-of-type(4) {
-  background-image: url(../images/mountain.jpg);
+.about .pictures .item:nth-of-type(4) p {
+  animation-delay: 12s;
 }
 .contact {
   display: flex;
@@ -155,6 +146,37 @@ section {
 .contact p:hover {
   cursor: pointer;
   color: #999;
+}
+@keyframes image {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes text {
+  0% {
+    transform: translateX(110%);
+  }
+  3% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(110%);
+  }
 }
 @media (max-width: 1400px) {
   main p {
@@ -198,6 +220,9 @@ section {
   .project p {
     width: 100%;
   }
+  .about .pictures {
+    height: 250px;
+  }
 }
 @media (max-width: 425px) {
   h2 {
@@ -237,14 +262,16 @@ section {
   }
   .about .pictures {
     margin-top: 10px;
+    height: 20vh;
   }
   .about .pictures .item {
     width: 90%;
-    height: 23%;
-    transition: 2s;
+    left: 5%;
+    height: 100%;
   }
   .about .pictures .item p {
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 18px;
   }
   .contact p {
     flex-basis: 100%;
