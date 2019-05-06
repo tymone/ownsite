@@ -130,6 +130,10 @@ section {
 .about .pictures .item:nth-of-type(4) p {
   animation-delay: 12s;
 }
+
+.cooperation {
+  margin-bottom: 30px;
+}
 .contact {
   display: flex;
   flex-wrap: wrap;

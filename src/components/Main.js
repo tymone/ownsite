@@ -43,7 +43,6 @@ export default class Main extends React.Component {
           <h2>Witam na mojej stronie</h2>
           <div className="wrapLeft">
             <p>
-              {" "}
               Strona na której obecnie się znajdujesz jest w pełni responsywna
               na wszystkich urządzeniach, od małych ekranów smartfonów, po
               wysokiej rozdzielczości ekrany monitorów komputerowych. Stworzona
@@ -70,7 +69,7 @@ export default class Main extends React.Component {
             jest to projekt 'do szuflady' w celu rozwijania umiejętności
             programistycznych, gdzie wykorzystuję technologie takie jak: HTML5,
             CSS3(Sass), Java Script(ES6, React), Python(Flask), MongoDB.(
-            <strong>póki co link do repozytorium.</strong>){" "}
+            <strong>póki co link do repozytorium.</strong>)
           </p>
           <a href="https://github.com/tymone/rescuer_portal">
             <img src={printscr} alt="printscreen" />
@@ -100,6 +99,17 @@ export default class Main extends React.Component {
               <p>...wędrować po górach też, nawet bardzo lubię.</p>
             </div>
           </div>
+        </section>
+        <section className="cooperation">
+          <h2>Współpraca</h2>
+          <p>
+            Jeśli jesteś osobą zainteresowaną współpracą czy to ze względu
+            potrzeby posiadania własnej strony internetowej lub innowacyjnego
+            rozwiązania technicznego usprawniającego twoją organizację pracy czy
+            też osobą/firmą szukającą pracownika ze znajomością: HTML5, CSS3,
+            Sass, JavaScript, React, Express.js, Node.js, MongoDB, Git - to
+            zapraszam do sekcji kontakt.
+          </p>
         </section>
         <section className="contact">
           <h2>Kontakt</h2>
