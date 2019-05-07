@@ -105,10 +105,10 @@ export default class Main extends React.Component {
           <p>
             Jeśli jesteś osobą zainteresowaną współpracą czy to ze względu
             potrzeby posiadania własnej strony internetowej lub innowacyjnego
-            rozwiązania technicznego usprawniającego twoją organizację pracy czy
-            też osobą/firmą szukającą pracownika ze znajomością: HTML5, CSS3,
-            Sass, JavaScript, React, Express.js, Node.js, MongoDB, Git - to
-            zapraszam do sekcji kontakt.
+            rozwiązania technologicznego usprawniającego twoją organizację pracy
+            czy też osobą/firmą szukającą pracownika ze znajomością: HTML5,
+            CSS3, Sass, JavaScript, React, Express.js, Node.js, MongoDB, Git -
+            to zapraszam do sekcji kontakt.
           </p>
         </section>
         <section className="contact">
