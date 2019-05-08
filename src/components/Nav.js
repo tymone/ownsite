@@ -10,7 +10,7 @@ export default class Nav extends React.Component {
   };
 
   backgroundScroll = () => {
-    $(document).on("scroll", function() {
+    $(document).on("scroll", function () {
       const scroll = $(document).scrollTop();
       const headerHigh = $("header").height();
       const $nav = $("nav");
@@ -24,7 +24,7 @@ export default class Nav extends React.Component {
   };
 
   scrollOnSection1 = () => {
-    $("body, html").animate({ scrollTop: $(".wrap").offset().top });
+    $("body, html").animate({ scrollTop: $(".start").offset().top });
     $(".fa-times, nav, ul, li").removeClass("active");
   };
   scrollOnSection2 = () => {
@@ -36,6 +36,10 @@ export default class Nav extends React.Component {
     $(".fa-times, nav, ul, li").removeClass("active");
   };
   scrollOnSection4 = () => {
+    $('body, html').animate({ scrollTop: $(".cooperation").offset().top });
+    $('.fa-times, nav, ul, li').removeClass('active');
+  }
+  scrollOnSection5 = () => {
     $("body, html").animate({ scrollTop: $(".contact").offset().top });
     $(".fa-times, nav, ul, li").removeClass("active");
   };
@@ -58,6 +62,9 @@ export default class Nav extends React.Component {
             <i className="fas fa-user-tie" /> O mnie
           </li>
           <li onClick={this.scrollOnSection4}>
+            <i className="far fa-keyboard" />Współpraca
+          </li>
+          <li onClick={this.scrollOnSection5}>
             <i className="fas fa-address-card" />
             Kontakt
           </li>

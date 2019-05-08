@@ -69,12 +69,21 @@ a {
 .fa-home,
 .fa-project-diagram,
 .fa-user-tie,
-.fa-address-card {
+.fa-address-card,
+.fa-keyboard {
   display: inline-block;
   padding: 5px 20px 5px 5px;
 }
-
-@media (max-width: 909px) {
+@media(max-width: 1150px){
+  .fa-home,
+  .fa-project-diagram,
+  .fa-user-tie,
+  .fa-address-card,
+  .fa-keyboard {
+  display: none;
+}
+}
+@media (max-width: 800px) {
   nav {
     position: fixed;
     height: 0;
@@ -83,7 +92,7 @@ a {
   nav.active {
     position: fixed;
     width: 100%;
-    height: 300px;
+    height: 350px;
     opacity: 0.9;
     background-color: #000;
   }
