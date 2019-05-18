@@ -1,7 +1,7 @@
 //poprawić IF'y w hideNav!
 
 import React from "react";
-import "../styles/Nav.css";
+import "../styles/Navy.css";
 import $ from "jquery";
 
 export default class Nav extends React.Component {
