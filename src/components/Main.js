@@ -2,15 +2,15 @@ import React from "react";
 import "../styles/Main.css";
 import $ from "jquery";
 
-import Start from './Start.js';
-import Projects from './Projects.js';
-import About from './About.js';
-import Cooperation from './Cooperation.js';
-import Contact from './Contact.js';
+import Start from "./Start.js";
+import Projects from "./Projects.js";
+import About from "./About.js";
+import Cooperation from "./Cooperation.js";
+import Contact from "./Contact.js";
 
 export default class Main extends React.Component {
   scroll = () => {
-    $(document).on("scroll", function () {
+    $(document).on("scroll", function() {
       const scrollValue = $(this).scrollTop();
       const img = $(".start .wrapLeft img");
       const imgFromTop = img.offset().top;
