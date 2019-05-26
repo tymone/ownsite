@@ -25,7 +25,7 @@ export default class Contact extends Component {
     };
 
     axios
-      .post("http://localhost:3000/", newMessage)
+      .post("http://localhost:5000/", newMessage)
       .then(res => console.log(res.data));
 
     this.setState({

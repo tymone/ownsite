@@ -5,7 +5,7 @@ const cors = require("cors");
 const config = require("./config");
 const mongoose = require("mongoose");
 const messageRoutes = express.Router();
-const PORT = 3000; //zmienić !
+const PORT = 5000; //zmienić !
 
 let Message = require("./contact.model");
 
@@ -33,6 +33,6 @@ messageRoutes.route("/").post(function(req, res) {
 });
 app.use("/", messageRoutes);
 
-app.listen(PORT, function() {
+app.listen(PORT || "0.0.0.0", function() {
   console.log("Server is running on port: " + PORT);
 });
