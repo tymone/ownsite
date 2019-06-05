@@ -2,8 +2,9 @@
 
 # dependencies
 /node_modules
+/backend/node_modules
 /.pnp
-/src/backend/config.js
+/backend/config.js
 .pnp.js
 
 # testing
