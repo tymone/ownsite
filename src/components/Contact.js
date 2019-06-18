@@ -25,7 +25,7 @@ export default class Contact extends Component {
     };
 
     axios
-      .post('http://www.tymon-dev.pl', newMessage) //adres serw?
+      .post('http://www.tymon-dev.pl', newMessage)
       .then(res => console.log(res.data));
 
     this.setState({
