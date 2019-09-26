@@ -5,7 +5,7 @@ import printscr from "../images/printscreen.png";
 
 export default class Projects extends Component {
   state = {
-    class: 'project clearfix',
+    class: 'project',
     title: 'Moje projekty',
   }
 
@@ -13,13 +13,10 @@ export default class Projects extends Component {
     const body =
       <React.Fragment>
         <p>
-          Aktualnie zajmuję się projektem dla mojej obecnej pracy, póki co
-          jest to projekt 'do szuflady' w celu rozwijania umiejętności
-          programistycznych, gdzie wykorzystuję technologie takie jak: HTML5,
-          CSS3(Sass), Java Script(ES6, React), Python(Flask), MongoDB.(
-          <i>póki co link do repozytorium.</i>)
+          Aktualnie zajmuję się projektem organizacji czasu pracy dla pracowników w celu rozwijania umiejętności, gdzie wykorzystuję technologie takie jak: <strong>HTML5,
+          CSS3(Sass), Java Script, React, Axios, NodeJS, ExpressJS, MongoDB.</strong>
         </p>
-        <a href="https://github.com/tymone/rescuer_portal">
+        <a href="https://tymone.github.io/rescuer_portal/">
           <img src={printscr} alt="printscreen" />
         </a>
       </React.Fragment>
