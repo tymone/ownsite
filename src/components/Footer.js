@@ -28,8 +28,8 @@ const Footer = () => {
           <p>
             <a href='https://github.com/tymone/'>
               <i className="fab fa-github" />
-                </a>
-                </p>
+            </a>
+          </p>
         </div>
     </footer>
   );

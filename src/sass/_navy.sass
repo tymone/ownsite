@@ -1,12 +1,16 @@
 nav
-    position: fixed
-    width: 100%
-    height: 40px
-    top: 0
-    left: 0
-    background-color: #ddd
-  
-    ul
+  position: fixed
+  width: 100%
+  height: 40px
+  top: 0
+  left: 0
+  background-color: #ddd
+
+  i.fa-bars
+    display: none
+
+  ul
+    &.showNav
       position: absolute
       top: 10px
       right: 0
@@ -15,25 +19,73 @@ nav
       justify-content: space-around
       list-style: none
       
-      li
-        overflow: hidden
-        position: relative
-        color: black
-        text-decoration: none
-        font-size: 20px
-        font-family: 'Roboto', sans-serif
-        text-transform: uppercase  
-        cursor: pointer        
-          
-        &:before
-          content: ''
-          position: absolute;
-          bottom: 0
-          right: -100%
-          width: 100%
-          height: 3px
-          background-color: black
-          transition: .5s cubic-bezier(0, 1.8, 1, 1)
+    li
+      overflow: hidden
+      position: relative
+      color: black
+      text-decoration: none
+      font-size: 20px
+      font-family: 'Roboto', sans-serif
+      text-transform: uppercase  
+      cursor: pointer        
+        
+      &:before
+        content: ''
+        position: absolute;
+        bottom: 0
+        right: -100%
+        width: 100%
+        height: 3px
+        background-color: black
+        transition: .5s cubic-bezier(0, 1.8, 1, 1)
 
-        &:hover::before
-          right: 0
+      &:hover::before
+        right: 0
+
+  .barNav
+    position: fixed
+    width: 0
+    height: 0
+
+@media (max-width: 700px)
+  nav
+    background-color: transparent
+
+    ul.showNav
+      display: none
+
+    i.fa-bars
+      display: block
+      position: fixed
+      background-color: #ddd
+      top: 0
+      right: 0
+      padding: 20px
+      font-size: 30px
+      cursor: pointer
+      z-index: 100
+
+      &.hide
+        color: white
+
+    ul.active
+      display: flex
+      flex-wrap: wrap
+      position: fixed
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 0, 0, 0.9)
+      transition: .5s
+      top: 0
+      right: 0
+
+      li
+        width: 100%
+        text-align: center
+        color: white
+        font-size: 30px
+        margin: auto
+
+        &:before
+          background-color: transparent
+    

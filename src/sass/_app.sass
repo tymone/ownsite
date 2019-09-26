@@ -23,209 +23,48 @@ section
     margin: 0 auto
     display: flex
     padding: 40px 10px
-  // .start .bodySection
-//   display: flex
-//   flex-wrap: wrap
-//   div
-//     width: 50%
-//     margin: auto
-//   img
-//     margin-top: 20px
-//     transition: 1s
-//   .wrapLeft
-//     img
-//       width: 150px
-//       height: 150px
-//       transform: translateX(-100vw)
-//       &:nth-of-type(1)
-//         transition: 1s 0.3s
-//       &:nth-of-type(2)
-//         transition: 1s 0.2s
-//       &:nth-of-type(3)
-//         transition: 1s 0.1s
-//       &.scroll
-//         transform: translateX(0)
-//   .wrapRight
-//     img
-//       display: inline-block
-//       width: 350px
-//       transform: translateX(100vw)
-//       &.scroll
-//         transform: translateX(0)
 
-// .project
-//   p
-//     float: left
-//     width: 50%
-//   img
-//     width: 40%
-//     height: 100%
+@media (max-width: 1120px)
+  main
 
-// .contact .bodySection
-//   display: flex
-//   .leftSide
-//     display: flex
-//     flex-wrap: wrap
-//     flex-basis: 50%
-//     margin-left: 100px
-//     p
-//       flex-basis: 100%
-//       text-align: left
-//       a
-//         text-decoration: none
-//         transition: 0.4s
-//         i
-//           padding-right: 30px
-//         &:hover
-//           cursor: pointer
-//           margin-left: 20px
-//           color: #777
-//   .rightSide
-//     flex-basis: 30%
-//     form
-//       display: flex
-//       flex-wrap: wrap
-//       justify-content: flex-end
-//     input
-//       display: block
-//       width: 100%
-//       height: 40px
-//       font-size: 25px
-//       margin-bottom: 20px
-//       background-color: #ddd
-//     textarea
-//       display: block
-//       resize: none
-//       width: 100%
-//       height: 200px
-//       font-size: 24px
-//       line-height: 40px
-//       background-color: #ddd
-//     button
-//       width: 100px
-//       height: 50px
-//       margin-top: 20px
-//       background-color: rgba(0, 0, 0, 0)
-//       color: white
-//       font-size: 20px
-//       border-radius: 10px
-//       &:hover
-//         cursor: pointer
-//         background-color: #fff
-//         opacity: 0.8
-//         color: black
-//         font-family: roboto, sans-serif
+    section
 
-// @keyframes image
-//   0%
-//     opacity: 0
-//   3%
-//     opacity: 1
-//   20%
-//     opacity: 1
-//   25%
-//     opacity: 0
-//   100%
-//     opacity: 0
+      &.about, &.project, &.cooperation, &.contact
 
-// @keyframes text
-//   0%
-//     transform: translateX(110%)
-//   3%
-//     transform: translateX(0)
-//   20%
-//     transform: translateX(0)
-//   25%
-//     transform: translateX(110%)
+        p
+          font-size: 20px
 
-// @media (max-width: 1400px)
-//   main p
-//     font-size: 27px
-//   .start .bodySection div
-//     width: 100%
-//     margin: 15px auto
+@media (max-width: 938px)
+  main
 
-// @media (max-width: 1205px)
-//   .contact .bodySection p
-//     flex-basis: 100%
+    section
 
-// @media (max-width: 1024px)
-//   main p
-//     font-size: 24px
-//     line-height: 35px
+      &.about, &.project, &.cooperation, &.contact
 
-//   .start .bodySection .wrapLeft img
-//     width: 100px
-//     height: 100px
-//     margin-top: 30px
+        p
+          font-size: 17px
 
-//   .contact .bodySection p
-//     line-height: 50px
+@media (max-width: 767px)
+  main
+    
+    section
 
-//   .project p
-//     width: 100%
+      &.about, &.project, &.cooperation, &.contact
 
-// @media (max-width: 768px)
-//   .about .pictures
-//     height: 200px
+        p
+          font-size: 24px
+          width: 100%
 
-//   .contact .bodySection
-//     display: flex
-//     flex-wrap: wrap
-//     justify-content: center
-//     .leftSide
-//       flex-basis: 80%
-//       margin-left: 0
-//       margin-bottom: 40px
-//       p
-//         flex-basis: 50%
-//     .rightSide
-//       flex-basis: 80%
-//       form
-//         justify-content: center
+@media (max-width: 424px)
+  main
 
-// @media (max-width: 717px)
-//   .contact .bodySection .leftSide p
-//     flex-basis: 100%
-//     text-align: center
+    section
 
-// @media (max-width: 425px)
-//   h2
-//     width: 100%
-//     font-size: 35px
-//     line-height: 50px
-//     margin-bottom: 10px
+      &.about, &.project, &.cooperation, &.contact
 
-//   main p
-//     font-size: 20px
-//     line-height: 30px
+        p
+          font-size: 20px
 
-//   .start .bodySection
-//     width: 100%
-//     margin-bottom: 20px
-//     .wrapLeft img
-//       width: 100px
-//       height: 100px
-//       margin: 10px
-//     .wrapRight img
-//       width: 280px
-//       margin-top: 20px
-
-//   .project img
-//     width: 80%
-
-//   .about .pictures
-//     margin-top: 10px
-//     height: 20vh
-//     .item
-//       width: 90%
-//       left: 49%
-//       height: 100%
-//       p
-//         font-size: 16px
-//         line-height: 16px
-
-//   .contact p
-//     flex-basis: 100%
-//     font-size: 14px
-//     margin: 1px auto
+      h2
+        font-size: 40px
+        padding: 30px 0

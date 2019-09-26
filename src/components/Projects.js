@@ -11,7 +11,7 @@ export default class Projects extends Component {
 
   render() {
     const body =
-      <React.Fragment>
+      <>
         <p>
           Aktualnie zajmuję się projektem organizacji czasu pracy dla pracowników w celu rozwijania umiejętności, gdzie wykorzystuję technologie takie jak: <strong>HTML5,
           CSS3(Sass), Java Script, React, Axios, NodeJS, ExpressJS, MongoDB.</strong>
@@ -19,7 +19,7 @@ export default class Projects extends Component {
         <a href="https://tymone.github.io/rescuer_portal/">
           <img src={printscr} alt="printscreen" />
         </a>
-      </React.Fragment>
+      </>
     return (
       <Template class={this.state.class} title={this.state.title} body={body} />
     )
