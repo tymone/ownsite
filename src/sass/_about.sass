@@ -1,21 +1,54 @@
 .about
+  height: 695px 
     
   .aboutImg
+    position: relative
     width: 40%
     margin: auto
 
     img
-      width: 100%
-      
+      width: 0%
+      transition: 1s
 
+      &.active
+        width: 100%
+    
   p
+    position: relative
     width: 60%
+    bottom: -900px
     font-size: 24px
     margin: auto
     padding: 10px
+    transition: 1s .3s
+    
+  p.active
+    width: 60%
+    bottom: 0
+  
+    
+@media (max-width: 1024px)
+  .about
+    height: 518px
 
 @media (max-width: 767px)
   .about
+    height: 438px
 
     .aboutImg
       display: none
+
+    p.active
+      width: 100%
+
+@media (max-width: 425px)
+  .about
+    height: 519px
+
+@media (max-width: 375px)
+  .about
+    height: 543px
+
+@media (max-width: 320px)
+  .about
+    height: 639px

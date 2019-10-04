@@ -1,22 +1,51 @@
 .cooperation
+  height: 713px
+  
 
   .photo
+    position: relative
     width: 40%
     
     img
-      display: block
-      width: 100%
+      position: relative
+      width: 0
+      transition: 1s
+
+      &.active
+        width: 100%
 
   p
+    position: relative
     width: 60%
+    bottom: -900px
     margin: auto
     padding: 0 30px
     font-size: 24px
+    transition: 1s .3s
+
+    &.active
+      bottom: 0
 
 
+@media (max-width: 1024px)
+  .cooperation
+    height: 528px
 
 @media (max-width: 767px)
   .cooperation
+    height: 421px
 
     .photo
       display: none
+
+@media (max-width: 425px)
+  .cooperation
+    height: 451px
+
+@media (max-width: 375px)
+  .cooperation
+    height: 523px
+
+@media (max-width: 320px)
+  .cooperation
+    height: 643px

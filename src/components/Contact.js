@@ -37,7 +37,27 @@ export default class Contact extends Component {
     });
   };
 
+  scroll = () => {
+    let title = document.querySelector('.contact h2')
+    title.style.opacity = (window.scrollY - 1550) * .003
+
+    if(window.scrollY > 2100){
+      let inputName = document.querySelector('.contact input[name=name]')
+      let inputEmail = document.querySelector('.contact input[name=email]')
+      let textarea = document.querySelector('.contact textarea')
+      let btn = document.querySelector('.contact button')
+     
+
+      inputName.classList.add('active')
+      inputEmail.classList.add('active')
+      textarea.classList.add('active')
+      btn.classList.add('active')
+    }
+  }
+
   render() {
+    
+    window.addEventListener('scroll', this.scroll)
     const body = (
       <>        
         <form onSubmit={this.onSubmit}>

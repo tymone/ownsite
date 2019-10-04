@@ -1,20 +1,38 @@
 .project
+  height: 637px 
 
   p
+    position: relative
     width: 60%
+    bottom: -900px
     margin: auto
     padding: 0 10px
     font-size: 24px
+    transition: 1s  .3s
+
+    &.active
+      bottom: 0
 
   a
+    position: relative
     width: 40%
 
   img
-    display: block
-    width: 100%
+    position: relative
+    width: 0
+    transition: 1s
+
+    &.active
+      width: 100%
+
+@media (max-width: 1024px)
+  .project
+    height: 476px
+
 
 @media (max-width: 767px)
   .project
+    height: 385px
 
     .bodySection
       display: flex
@@ -27,3 +45,15 @@
     p
       width: 100%
       padding: 0 40px
+
+@media (max-width: 425px)
+  .project
+    height: 566px
+
+@media (max-width: 375px)
+  .project
+    height: 561px
+
+@media (max-width: 320px)
+  .project
+    height: 578px

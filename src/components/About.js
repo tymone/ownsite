@@ -9,15 +9,30 @@ export default class About extends Component {
     title: 'O mnie'
   }
 
+  scroll = () => {
+    let title = document.querySelector('.about h2')
+    title.style.opacity = window.scrollY * .003
+    
+    if(window.scrollY > 350){
+      let img = document.querySelector('.aboutImg img')
+      let text = document.querySelector('.about p')
+
+      img.classList.add('active')
+      text.classList.add('active')
+    }
+  }
+
   render() {
+    window.addEventListener('scroll', this.scroll)
     const body = (
       <>
       <div className="aboutImg">
         <img src={aboutImg} alt="programming on computer"/>
       </div>
-      <p>Z początkiem 2017 roku rozpocząłem naukę programowania w kierunku front-end. Posiadając podstawową wiedzę z HTML5, CSS3 oraz Java Script ciągle doskonalę swoją wiedzę w zakresie frameworków takich jak React, ExpressJS czy preprocesora Sass. Co przy pomocy biblioteki takiej jak Axios pozwala swobodnie połączyć się z bazą danych MongoDB. Połączenie tego wszystkiego pozwala na tworzenie zarówno prostych jednostronnych wizytówek, jak i rozbudowanych serwisów do usprawnienia pracy w firmie.</p>
+      <p>Od 2017 roku rozpocząłem naukę programowania w kierunku front-end. Posiadając podstawową wiedzę z HTML5, CSS3 oraz Java Script ciągle doskonalę swoją wiedzę w zakresie frameworka React czy preprocesora Sass. Co przy pomocy frameworka Express pozwala połączyć się z bazą danych MongoDB. Połączenie tego wszystkiego pozwala na tworzenie zarówno prostych jednostronnych wizytówek, jak i rozbudowanych serwisów do usprawnienia pracy oraz zaoszczędzenia cennego czasu.</p>
       </>
     )
+
     return (
       <Template class={this.state.class} title={this.state.title} body={body} />
     )
