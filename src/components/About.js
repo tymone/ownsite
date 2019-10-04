@@ -29,7 +29,7 @@ export default class About extends Component {
       <div className="aboutImg">
         <img src={aboutImg} alt="programming on computer"/>
       </div>
-      <p>Od 2017 roku rozpocząłem naukę programowania w kierunku front-end. Posiadając podstawową wiedzę z HTML5, CSS3 oraz Java Script ciągle doskonalę swoją wiedzę w zakresie frameworka React czy preprocesora Sass. Co przy pomocy frameworka Express pozwala połączyć się z bazą danych MongoDB. Połączenie tego wszystkiego pozwala na tworzenie zarówno prostych jednostronnych wizytówek, jak i rozbudowanych serwisów do usprawnienia pracy oraz zaoszczędzenia cennego czasu.</p>
+      <p>Od 2017 zajmuję się programowaniem w kierunku front-end, posiadając podstawową wiedzę z HTML5, CSS3 oraz JavaScript ciągle doskonalę swoją wiedzę w zakresie frameworka React czy preprocesora Sass, co przy pomocy frameworka Express pozwala połączyć się z bazą danych MongoDB. Połączenie tego wszystkiego pozwala na tworzenie zarówno prostych jednostronnych wizytówek, jak i rozbudowanych serwisów do usprawnienia pracy oraz zaoszczędzenia cennego czasu.</p>
       </>
     )
 

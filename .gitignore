@@ -6,6 +6,7 @@
 /.pnp
 /backend/config.js
 .pnp.js
+/src/styles
 
 # testing
 /coverage
