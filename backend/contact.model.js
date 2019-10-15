@@ -10,6 +10,12 @@ let Message = new Schema({
   },
   message: {
     type: String
+  },
+  date: {
+    type: String
+  },
+  time: {
+    type: String
   }
 });
 module.exports = mongoose.model("Message", Message);

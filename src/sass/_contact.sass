@@ -1,53 +1,80 @@
 .contact
-  height: 717px
+  h2
+    font-size: 60px
+    text-transform: uppercase
+    padding: 40px 0
 
   .bodySection
 
     form
-      width: 50%
+      width: 60%
       margin: 0 auto
+      padding: 0 50px
       display: flex
       flex-wrap: wrap
       justify-content: space-around
 
-      input
+      .inputBox
         position: relative
-        display: block
         width: 100%
-        height: 40px
-        font-size: 25px
-        margin-bottom: 20px
-        border: none
-        border-bottom: 2px solid gray
-        background-color: transparent
-        transition: 1s
+        padding: 20px 10px
 
-        &[name=name]
-          left: -1200px
 
-          &.active
-            left: 0
-        
-        &[name=email]
-          right: -1200px
-
-          &.active
-            right: 0
-
-      textarea
-        display: block
-        resize: none
-        width: 0
-        height: 200px
-        font-size: 24px
-        line-height: 40px
-        border: none
-        border-bottom: 1px solid black
-        background-color: transparent
-        transition: 1s .2s
-
-        &.active
+        input
+          display: block
           width: 100%
+          height: 40px
+          font-size: 25px
+          border: none
+          border-bottom: 2px solid gray
+          background-color: transparent
+          transition: 1s
+
+          &[name=name]
+            left: -1200px              
+
+            &.active
+              left: 0
+          
+          &[name=email]
+            right: -1200px
+
+            &.active
+              right: 0
+
+          &:focus ~ label,
+          &:valid ~ label
+              top: -5px
+              font-size: 20px
+        
+        label
+          position: absolute
+          left: 15px
+          top: 20px
+          font-size: 25px
+          transition: .5s
+          pointer-events: none
+
+
+        textarea
+          display: block
+          resize: none
+          width: 0
+          height: 200px
+          font-size: 24px
+          line-height: 40px
+          border: none
+          border-bottom: 1px solid black
+          background-color: transparent
+          transition: 1s .2s
+
+          &:focus ~ label,
+          &:valid ~ label
+            top: -5px
+            font-size: 20px
+
+          &.active
+            width: 100%
         
 
       button
@@ -61,7 +88,7 @@
         font-size: 26px
         border: 2px solid #848383
         border-radius: 20px
-        transition: .2s .7s
+        transition: .2s
 
         &:hover
           cursor: pointer
@@ -72,6 +99,26 @@
         
         &.active
           bottom: 0
+
+    .contactRightSide
+      padding: 0 100px 50px 100px
+      width: 40%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+
+      p
+        text-align: left
+        text-transform: uppercase
+        font-size: 26px
+
+        a
+          text-decoration: none
+          color: black
+
+          i
+            padding-right: 40px
+
 
 @media (max-width: 1024px)
   .contact

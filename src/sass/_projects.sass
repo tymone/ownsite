@@ -1,9 +1,16 @@
 .project
-  height: 637px 
+  height: 637px
+  background-color: #848383
+  color: white
+
+  h2
+    padding: 50px 0
+    font-size: 60px
+    text-transform: uppercase
 
   p
-    position: relative
-    width: 60%
+    position: relative 
+    width: 45%
     bottom: -900px
     margin: auto
     padding: 0 10px
@@ -13,17 +20,39 @@
     &.active
       bottom: 0
 
-  a
+  .imgContainer
     position: relative
-    width: 40%
+    width: 40%    
 
-  img
-    position: relative
-    width: 0
-    transition: 1s
+    img
+      position: relative
+      width: 0
+      transition: 1s
 
-    &.active
-      width: 100%
+      &.active
+        width: 100%
+
+    .handleHover
+      display: none
+
+      &.active
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.6)
+
+        a
+          position: relative
+          top: 50%
+          font-size: 30px
+          margin: 0 50px
+          color: white
+            
+
+
 
 @media (max-width: 1024px)
   .project

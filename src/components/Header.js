@@ -5,10 +5,6 @@ import logoImg from '../images/portret.png';
 
 const Header = () => {
 
-  let scrollOnContact = () => {
-    document.querySelector('.contact').scrollIntoView({behavior: "smooth", block: "start"})
-  }
-
   let scrollDown = () => {
     window.addEventListener('scroll', () => {
       if(window.scrollY){
@@ -30,11 +26,9 @@ const Header = () => {
       </div>
       <div className="title">
         <h1>Tymoteusz Hryniewiecki</h1>
-        <h2>Web Developer</h2>
-        <button className="sendMessageButton" onClick={scrollOnContact}>Wyślij wiadomość</button>
+        <p>Web developer</p>
       </div>
       <div className="navIco">
-      
         <i className="fas fa-angle-double-down"></i>
       </div>
     </header>

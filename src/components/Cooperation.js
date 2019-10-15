@@ -2,42 +2,87 @@ import React, { Component } from "react";
 
 import Template from "./Template.js";
 
-import shakeHands from '../images/shakeHands.jpg';
+import html5logo from '../images/html5-logo.png';
+import css3logo from '../images/css3-logo.png';
+import sasslogo from '../images/sass-logo.png';
+import jslogo from '../images/js-logo.png';
+import reduxlogo from '../images/redux-logo.png';
+import reactlogo from '../images/react-logo.png';
+import expresslogo from '../images/express-logo.png';
+import nodelogo from '../images/node-logo.png';
+import mongologo from '../images/mongo-logo.png';
+import gitlogo from '../images/git-logo.png';
 
 export default class Cooperation extends Component {
   state = {
     class: "cooperation",
-    title: "Współpraca"
+    title: "Stack technologiczny"
   };
 
   scroll = () => {
-    let title = document.querySelector('.cooperation h2')
-    title.style.opacity = (window.scrollY - 900) * .003 
-    
-    if(window.scrollY > 1550){
-      let img = document.querySelector('.cooperation img')
-      let text = document.querySelector('.cooperation p')
+    window.addEventListener('scroll', () => {
+      
+      if(window.scrollY > 1150){
+        // let img = document.querySelector('.cooperation img')
+        let text = document.querySelector('.cooperation p')
 
-      img.classList.add('active')
-      text.classList.add('active')
-    }
+        // img.classList.add('active')
+        text.classList.add('active')
+      }
+    })
   }
 
   render() {
-    window.addEventListener('scroll', this.scroll)
+    this.scroll()
     const body = (
       <>
-      <div className="photo">
-        <img src={shakeHands} alt="shake hands"/>
-      </div>
-      <p>
-        Jeśli jesteś osobą zainteresowaną współpracą czy to ze względu
-        potrzeby posiadania własnej strony internetowej lub innowacyjnego
-        rozwiązania technologicznego usprawniającego twoją organizację pracy
-        czy też osobą/firmą szukającą pracownika ze znajomością: <strong>HTML5, CSS3,
-        Sass, JavaScript, React, Redux, Express.js, Node.js, Axios, MongoDB, Git</strong> - zapraszam
-        do sekcji kontakt.
-      </p>
+        <p>
+          Stack technologiczny w którym się rozwijam
+        </p>
+        <div className="arrows">
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <i className="fas fa-arrow-down arr1"></i>
+          <i className="fas fa-arrow-down arr2"></i>
+          <i className="fas fa-arrow-down arr3"></i>
+          <i className="fas fa-arrow-down arr4"></i>
+
+        </div>
+        <div className="stackContainer">
+          <div className="front-endContainer">
+            <p>Front-end</p>
+            <div className="logoContainer">
+              <img src={html5logo} alt='logo html5'/>
+              <img src={css3logo} alt='logo css3'/>
+              <img src={sasslogo} alt='logo sass'/>
+              <img src={jslogo} alt='logo js'/>
+              <img src={reactlogo} alt='logo react'/>
+              <img src={reduxlogo} alt='logo redux'/>
+            </div>
+          </div>
+
+          <div className="back-endContainer">
+            <p>Back-end</p>
+            <div className="logoContainer">
+              <img src={expresslogo} alt='logo express'/>
+              <img src={nodelogo} alt='logo node'/>
+            </div>
+          </div>
+
+          <div className="dbContainer">
+            <p>Bazy danych</p>
+            <div className="logoContainer">
+              <img src={mongologo} alt='logo mongo'/>
+            </div>
+          </div>
+
+          <div className="versionControl">
+            <p>Kontrola wersji</p>
+            <div className="logoContainer">
+              <img src={gitlogo} alt='logo git'/>
+            </div>
+          </div>
+        </div>
       </>
     );
     return (

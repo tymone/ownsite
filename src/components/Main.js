@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/style.css";
+import "../sass/style.sass";
 
 import Projects from "./Projects.js";
 import About from "./About.js";

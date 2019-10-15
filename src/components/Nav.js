@@ -15,7 +15,7 @@ const Nav = () => {
     document.querySelector('.barNav').classList.toggle('active')
     document.querySelector('.fa-bars').classList.toggle('hide')
   }
-   
+    
   return (
     <>
       <nav>
@@ -39,22 +39,3 @@ const Nav = () => {
 }
 
   export default Nav
-
-
- // navbarFunc = () => {
-  //   $(".fa-times, nav, ul, li").toggleClass("active");
-  // };
-
-  // backgroundScroll = () => {
-  //   $(document).on("scroll", function() {
-  //     const scroll = $(document).scrollTop();
-  //     const headerHigh = $("header").height();
-  //     const $nav = $("nav");
-  //     if (scroll > headerHigh - 300) {
-  //       $nav.addClass("blackBgc");
-  //     }
-  //     if (scroll < headerHigh - 300) {
-  //       $nav.removeClass("blackBgc");
-  //     }
-  //   });
-  // };

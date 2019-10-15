@@ -1,0 +1,42 @@
+
+– po kliknięciu wyślij  treść formularza znika, a użytkownik nie otrzymuje żadnej informacji zwrotnej: nie wiadomo, czy wysłało, czy napotkało błąd
+
+
+– zakładka "Coverage" w Dev Toolsach mi pokazuje, że strona wykorzystuje tylko połowę skryptu JS. Jak zobaczyłem w źródło, to trochę tego jest... na co tyle kodu?
+
+
+– brakuje też jakiegoś wskaźnika w nawigacji, żeby pokazywało w której sekcji aktualnie znajduje się użytkownik
+
+a możesz też dodać tagi opengraph i twitter:card, żeby poprawić prezentację swojej strony przy udostępnieniu linku w mediach społecznościowych
+
+
+zmienić pobieranie z document.querySelector('') na https://www.fullstackreact.com/p/jsx-and-the-virtual-dom/
+
+
+Do tego czemu importujesz wszystko do glownegp pliku scss a i tak w kodzie reacta importujesz plik css?
+
+https://github.com/tymone/ownsite/blob/master/src/components/About.js#L26 <- w ten sposób zapinasz listenera w każdym renderze co jest samobójstwem
+
+
+użyj hooka componentDidMount
+no generalnie w reszcie komponentów robisz podobne błędy, więc nie ma sensu dublować opisu
+jednak to co mi się spodobało to próba wydzielenia reużywalnego komponentu poprzez https://github.com/tymone/ownsite/blob/master/src/components/Template.js
+
+możesz sie zastanowić czy props children nie będzie lepsze tutaj
+https://github.com/tymone/ownsite/blob/master/backend/server.js#L24 <- odważnie tako bez żadnej walidacji wpuszczać coś do bazy 
+
+
+
+- ten header w zaden sposob nie angazuje uzytkownika ani do niczego nie zachęca
+- jak klikam w navi to jest hover na zakladce i to jest spoko, ale jak przewijam do danej zakladki to fajnie by bylo gdyby ten efekt pozostal
+
+
+- projekty: jest tylko opis i zdjecie, a jesli ta strona ma za zadanie znalezc ci full-time prace (tak zakladam, chyba, ze chcesz robic freelance i ma ci zdobyc tylko zlecenia) to fajnie by bylo zeby byl jakis odsyłacz do githuba (tak, wiem, ze jak klikne w obrazek to mnie gdzies przeniesie, ale nie wiem co to nawet)
+
+- kontakt/stopka: ikonki do kontaktu i innych rzeczy dałbym w inne miejsce, tam gdzie teraz są są kompletnie niezauwazalne
+
+
+Straszne masło maślane :smile: wymieniłeś chyba dosłownie wszystkie możliwe opcje współpracy, więc równie dobrze możnaby to zamknąć w zdaniu "Jeśli jesteś zainteresowany współpracą - zapraszam do sekcji kontakt"
+W formularzu z kontaktem nie ma zadnej walidacji maila chyba, bo jak wpisuje bez @ to mi nie wywala zadnego bledu ani o nim nie komunikuje
+nie dostaje tez zadnego komunikatu po wyslaniu wiadomosci i nie wiem czy została wysłana czy był jakiś błąd - fajnie by było jakby znalazl sie taki ficzer
+no i uzywanie szarego koloru do buttonow to taki mehhh pomysł - bo nie wiem czy on jest disabled czy co?
