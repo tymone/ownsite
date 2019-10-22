@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import Template from './Template.js';
+import React, { Component } from "react";
+import axios from "axios";
+import Template from "./Template.js";
 
 export default class Contact extends Component {
   state = {
-    class: 'contact',
-    title: 'Kontakt',
-    name:'',
-    email: '',
-    message: ''
+    class: "contact",
+    name: "",
+    email: "",
+    message: ""
   };
+
+  componentDidMount() {
+    this.scroll();
+  }
 
   handleChange = e => {
     this.setState({
@@ -29,94 +32,108 @@ export default class Contact extends Component {
     };
 
     axios
-      .post('http://www.tymon-dev.pl', newMessage)
+      .post("http://www.tymon-dev.pl", newMessage)
       .then(res => console.log(res.data))
-      .then(alert('Pomyślnie wysłano wiadomość.'))
+      .then(alert("Pomyślnie wysłano wiadomość."));
 
     this.setState({
-      name:'',
-      email: '',
-      message: ''
+      name: "",
+      email: "",
+      message: ""
     });
   };
 
   scroll = () => {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 2800) {
+        let handleActive = document.querySelectorAll(".inputBox");
 
-      if(window.scrollY > 2100){
-        let inputName = document.querySelector('.contact input[name=name]')
-        let inputEmail = document.querySelector('.contact input[name=email]')
-        let textarea = document.querySelector('.contact textarea')
-        let btn = document.querySelector('.contact button')
-      
-        inputName.classList.add('active')
-        inputEmail.classList.add('active')
-        textarea.classList.add('active')
-        btn.classList.add('active')
+        handleActive.forEach(item => item.classList.add("active"));
       }
-    })
-  }
+    });
+  };
 
   render() {
-    this.scroll()
     const body = (
-      <>        
+      <>
+        <h2>Kontakt</h2>
         <form onSubmit={this.onSubmit}>
           <div className="inputBox">
-            <input type='text' value={this.state.name} onChange={this.handleChange} name='name' required />
+            <input
+              type="text"
+              value={this.state.name}
+              onChange={this.handleChange}
+              name="name"
+              required
+            />
             <label> Imię</label>
           </div>
-          <div className='inputBox'>
+          <div className="inputBox">
             <input
-              type='email'
+              type="email"
               value={this.state.email}
               onChange={this.handleChange}
-              name='email'
+              name="email"
               required
             />
             <label>e-mail</label>
           </div>
           <div className="inputBox">
             <textarea
-              name='message'
+              name="message"
               value={this.state.message}
-              onChange={this.handleChange} required
+              onChange={this.handleChange}
+              required
             />
             <label>Wiadomość</label>
           </div>
           <button>Wyślij</button>
         </form>
-        <div className='contactRightSide'>
+        <div className="contactRightSide">
           <p>
-            <a href='tel:509-767-794' rel="noopener noreferrer" target="_blank">
-              <i className='fas fa-mobile-alt' /> zadzwoń
+            <a href="tel:509-767-794" rel="noopener noreferrer" target="_blank">
+              <i className="fas fa-mobile-alt" /> zadzwoń
             </a>
           </p>
           <p>
-            <a href='mailto:tymoteusz.hryniewiecki@gmail.com' rel="noopener noreferrer" target="_blank">
-              <i className='far fa-envelope' /> wyślij e-mail
+            <a
+              href="mailto:tymoteusz.hryniewiecki@gmail.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="far fa-envelope" /> wyślij e-mail
             </a>
           </p>
           <p>
-            <a href='https://m.me/tymoteusz.hryniewiecki' rel="noopener noreferrer" target="_blank">
-              <i className='fab fa-facebook-square' /> Facebook
+            <a
+              href="https://m.me/tymoteusz.hryniewiecki"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fab fa-facebook-square" /> Facebook
             </a>
           </p>
           <p>
-            <a href='https://www.linkedin.com/in/tymoteusz-hryniewiecki/' rel="noopener noreferrer" target="_blank">
-              <i className='fab fa-linkedin' /> LinkedIn
+            <a
+              href="https://www.linkedin.com/in/tymoteusz-hryniewiecki/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fab fa-linkedin" /> LinkedIn
             </a>
           </p>
           <p>
-            <a href='https://github.com/tymone/' rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://github.com/tymone/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <i className="fab fa-github" /> github
             </a>
           </p>
         </div>
       </>
     );
-    return (
-      <Template class={this.state.class} title={this.state.title} body={body} />
-    );
+    return <Template class={this.state.class} body={body} />;
   }
 }
