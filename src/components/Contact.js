@@ -20,6 +20,19 @@ export default class Contact extends Component {
     });
   };
 
+  handleSubmitMessage = innerText => {
+    const infoWindow = document.querySelector(".handleSendMessage");
+    infoWindow.style.display = "block";
+
+    const infoText = document.querySelector(".sendMessageWindow p");
+    infoText.innerText = `${innerText}`;
+  };
+
+  handleCloseWindow = () => {
+    const infoWindow = document.querySelector(".handleSendMessage");
+    infoWindow.style.display = "none";
+  };
+
   onSubmit = e => {
     e.preventDefault();
 
@@ -33,8 +46,12 @@ export default class Contact extends Component {
 
     axios
       .post("http://www.tymon-dev.pl", newMessage)
-      .then(res => console.log(res.data))
-      .then(alert("Pomyślnie wysłano wiadomość."));
+      .then(res => this.handleSubmitMessage("Pomyślnie wysłano wiadomość"))
+      .catch(err =>
+        this.handleSubmitMessage(
+          " Wysyłanie wiadomości nie powiodło się. Spróbuj później."
+        )
+      );
 
     this.setState({
       name: "",
@@ -46,7 +63,7 @@ export default class Contact extends Component {
   scroll = () => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 2800) {
-        let handleActive = document.querySelectorAll(".inputBox");
+        let handleActive = document.querySelectorAll(".contact .handleActive");
 
         handleActive.forEach(item => item.classList.add("active"));
       }
@@ -58,7 +75,7 @@ export default class Contact extends Component {
       <>
         <h2>Kontakt</h2>
         <form onSubmit={this.onSubmit}>
-          <div className="inputBox">
+          <div className="inputBox handleActive">
             <input
               type="text"
               value={this.state.name}
@@ -68,7 +85,7 @@ export default class Contact extends Component {
             />
             <label> Imię</label>
           </div>
-          <div className="inputBox">
+          <div className="inputBox handleActive">
             <input
               type="email"
               value={this.state.email}
@@ -78,7 +95,7 @@ export default class Contact extends Component {
             />
             <label>e-mail</label>
           </div>
-          <div className="inputBox">
+          <div className="inputBox handleActive">
             <textarea
               name="message"
               value={this.state.message}
@@ -90,12 +107,12 @@ export default class Contact extends Component {
           <button>Wyślij</button>
         </form>
         <div className="contactRightSide">
-          <p>
+          <p className="handleActive">
             <a href="tel:509-767-794" rel="noopener noreferrer" target="_blank">
               <i className="fas fa-mobile-alt" /> zadzwoń
             </a>
           </p>
-          <p>
+          <p className="handleActive">
             <a
               href="mailto:tymoteusz.hryniewiecki@gmail.com"
               rel="noopener noreferrer"
@@ -104,7 +121,7 @@ export default class Contact extends Component {
               <i className="far fa-envelope" /> wyślij e-mail
             </a>
           </p>
-          <p>
+          <p className="handleActive">
             <a
               href="https://m.me/tymoteusz.hryniewiecki"
               rel="noopener noreferrer"
@@ -113,7 +130,7 @@ export default class Contact extends Component {
               <i className="fab fa-facebook-square" /> Facebook
             </a>
           </p>
-          <p>
+          <p className="handleActive">
             <a
               href="https://www.linkedin.com/in/tymoteusz-hryniewiecki/"
               rel="noopener noreferrer"
@@ -122,7 +139,7 @@ export default class Contact extends Component {
               <i className="fab fa-linkedin" /> LinkedIn
             </a>
           </p>
-          <p>
+          <p className="handleActive">
             <a
               href="https://github.com/tymone/"
               rel="noopener noreferrer"
@@ -131,6 +148,12 @@ export default class Contact extends Component {
               <i className="fab fa-github" /> github
             </a>
           </p>
+        </div>
+        <div className="handleSendMessage">
+          <div className="sendMessageWindow">
+            <p></p>
+            <button onClick={this.handleCloseWindow}>Zamknij</button>
+          </div>
         </div>
       </>
     );

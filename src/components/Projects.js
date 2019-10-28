@@ -16,11 +16,9 @@ export default class Projects extends Component {
   scroll = () => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 1150) {
-        let img = document.querySelector(".project img");
-        let text = document.querySelector(".project p");
+        let title = document.querySelectorAll(".project .handleActive");
 
-        img.classList.add("active");
-        text.classList.add("active");
+        title.forEach(item => item.classList.add("active"));
       }
     });
   };
@@ -41,9 +39,9 @@ export default class Projects extends Component {
   render() {
     const body = (
       <>
-        <h2>Projekty</h2>
+        <h2 className="handleActive">Projekty</h2>
         <div className="imgContainer">
-          <img src={printscr} alt="printscreen" />
+          <img src={printscr} alt="printscreen" className="handleActive" />
           <div className="handleHover">
             <a href="https://tymone.github.io/rescuer_portal/">
               <i className="fas fa-eye"></i>
@@ -53,12 +51,17 @@ export default class Projects extends Component {
             </a>
           </div>
         </div>
-        <p>
-          Aktualnie zajmuję się projektem organizacji czasu pracy dla
-          pracowników w celu rozwijania umiejętności, gdzie wykorzystuję
-          technologie takie jak:{" "}
+        <p className="handleActive">
+          W celu rozwijania umiejętności aktualnie pracuję nad projektem
+          organizacji czasu pracy pracowników, gdzie poza harmonogramem
+          zsynchronizowanym z kalendarzem(urlopy, delegacje, zwolnienia
+          lekarskie i inne dni wolne od pracy) znajduje się również szczegółowa
+          baza danych pracowników z możliwością ich dodawania, edycji oraz
+          usuwania, ToDoApp, tworzenie odrębnych harmonogramów z
+          wyszczególnieniem dat oraz przypisaniem do nich pracowników.
+          Technologie wykorzystane w tym projekcie:
           <strong>
-            HTML5, CSS3(Sass), Java Script, React, Redux, ExpressJS, MongoDB.
+            HTML5, CSS3(Sass), JavaScript, React, Redux, ExpressJS, MongoDB.
           </strong>
         </p>
       </>

@@ -14,12 +14,10 @@ export default class About extends Component {
 
   scrollSection = () => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        let img = document.querySelector(".about img");
-        let text = document.querySelector(".about p");
+      if (window.scrollY > 400) {
+        let handleActive = document.querySelectorAll(".about .handleActive");
 
-        img.classList.add("show");
-        text.classList.add("show");
+        handleActive.forEach(item => item.classList.add("active"));
       }
     });
   };
@@ -27,15 +25,20 @@ export default class About extends Component {
   render() {
     const body = (
       <>
-        <h2>O mnie</h2>
-        <img src={aboutImg} alt="programming on computer" />
-        <p>
+        <h2 className="handleActive">O mnie</h2>
+
+        <p className="handleActive">
           Programowaniem zajmuję się od 2017 roku, co po niedługim okresie stało
-          się pasją. Ciekawość i chęci ciągle pozwalają na rozwój w
-          programowaniu webowym. Wolne chwile między programowaniem a pracą na
-          etacie spędzam aktywnie przez jazdę na rowerze, pływanie czy też
-          wędrówki górskie.
+          się pasją. Ciekawość i chęci ciągle pozwalają na rozwój w tej
+          dziedzinie. Poza programowaniem prowadzę również aktywny tryb życia,
+          czy to jazda na rowerze, pływanie lub jeśli sezon sprzyja to wędrówki
+          górskie.
         </p>
+        <img
+          src={aboutImg}
+          alt="programming on computer"
+          className="handleActive"
+        />
       </>
     );
     return <Template class={this.state.class} body={body} />;

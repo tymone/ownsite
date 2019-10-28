@@ -24,8 +24,10 @@ export default class Cooperation extends Component {
 
   scroll = () => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 1900) {
-        let handleActive = document.querySelectorAll(".handleActive");
+      if (window.scrollY > 2000) {
+        let handleActive = document.querySelectorAll(
+          ".cooperation .handleActive"
+        );
 
         handleActive.forEach(item => item.classList.add("active"));
       }
@@ -94,7 +96,7 @@ export default class Cooperation extends Component {
             </div>
           </div>
         </div>
-        <p className="under">
+        <p className="under handleActive">
           Osoby zainteresowane współpracą zapraszam do sekcji kontakt.
         </p>
       </>

@@ -8,6 +8,7 @@ header
     position: absolute
     left: 0
     bottom: 0
+    
 
   h1
     position: absolute
@@ -24,17 +25,34 @@ header
     font-size: 30px
     color: #848383
 
-  .fa-angle-double-down
+  .borderArrows
     position: fixed
+    width: 50px
+    height: 60px
     bottom: 50px
     right: 31vw
-    transform: translateX(-50%)
-    font-size: 40px
+    border: 2px solid #848383
+    border-radius: 20px
+    overflow: hidden
+
+    .fa-angle-double-down
+      position: relative
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      margin: auto
+      font-size: 40px
+      animation: 2s arrows linear infinite
+      color: #848383
 
   .hide
     display: none
 
-
+@keyframes arrows
+  0%
+    top: -50%
+  100%
+    top: 150%
 
 @media (max-width: 1200px)
   header

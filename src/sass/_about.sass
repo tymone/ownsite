@@ -1,35 +1,44 @@
 .about
-  min-height: 700px
+  min-height: 650px
+  
+  .bodySection
+    border-left: 2px solid black
 
-  h2
-    width: 100%
-    text-align: left
-    padding: 0 0 40px 20px
-    font-size: 50px
+    h2
+      position: relative
+      left: -100%
+      width: 100%
+      text-align: left
+      padding-left: 60px
+      font-size: 50px
+      transition: 1s
 
-  img
-    position: relative
-    top: 0%
-    left: 0%
-    width: 0px
-    transition: 1s
+      &.active
+        left: 0
 
-    &.show
-      width: 40%
-      height: auto
+
+    img
+      position: relative
+      top: 0%
+      right: -700px
+      width: 50%
+      transition: 1s 1s
+
+      &.active
+        margin: auto
+        padding: 0 20px
+        right: 0
+      
+    p
+      position: relative
+      width: 50%
       margin: auto
-      padding: 0 20px
-    
-  p
-    position: relative
-    width: 60%
-    margin: auto
-    bottom: -900px
-    font-size: 24px
-    padding-left: 60px
-    transition: 1s .3s
-    text-align: left
-    
-    &.show
-      width: 60%
-      bottom: 0
+      bottom: -900px
+      font-size: 24px
+      padding: 0 60px
+      transition: 3s 1s
+      text-align: left
+      
+      &.active
+        width: 50%
+        bottom: 0

@@ -1,58 +1,79 @@
 .project
+  position: relative
   min-height: 637px
-  background-color: #848383
-  color: white
+  color: black
 
-  h2
-    width: 100%
-    text-align: center
-    padding-bottom: 50px
-    font-size: 60px
-    text-transform: uppercase
+  .bodySection
 
-  p
-    position: relative
-    width: 45%
-    right: -900px
-    margin: auto
-    padding: 0 10px
-    font-size: 24px
-    transition: 1s  .3s
+    &::before
+      content: ''
+      position: absolute
+      z-index: -1
+      top: 0%
+      left: 0%
+      width: 50%
+      height: 100%
+      background-color: #ddd
 
-    &.active
-      right: 0
-
-  .imgContainer
-    position: relative
-    width: 40%
-
-    img
+    h2
       position: relative
-      width: 0
+      top: 0
+      left: 100%
+      width: 59%
+      padding-bottom: 60px
+      font-size: 60px
       transition: 1s
 
       &.active
-        width: 100%
+        left: 52%
 
-    .handleHover
-      display: none
+    p
+      position: relative
+      width: 50%
+      right: -900px
+      margin: auto
+      padding: 0 0 0 40px
+      font-size: 24px
+      transition: 1s  .4s
 
       &.active
-        display: block
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        background-color: rgba(0, 0, 0, 0.6)
+        right: 0
 
-        a
-          position: relative
-          top: 50%
-          left: 25%
-          font-size: 30px
-          margin: 0 50px
-          color: white
+    .imgContainer
+      position: relative
+      top: 0
+      left: 2%
+      width: 43%
+      margin: auto
+
+      img
+        position: relative
+        width: 100%
+        left: -150%
+        transition: 1s 1s
+
+        &.active
+          left: 0
+
+      .handleHover
+        display: none
+
+        &.active
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(0, 0, 0, 0.6)
+
+          a
+            position: relative
+            top: 50%
+            left: 25%
+            font-size: 30px
+            margin: 0 50px
+            color: white
 
 
 

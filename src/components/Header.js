@@ -4,24 +4,15 @@ import "../styles/style.css";
 import logoImg from "../images/portret.png";
 
 const Header = () => {
-  useEffect(() => scrollSection());
   useEffect(() => scrollDown());
 
-  let scrollSection = () => {
-    window.addEventListener("scroll", () => {
-      let section = document.querySelector("header");
-      let windowPosition = window.scrollY;
-      section.style.top = windowPosition + "px";
-    });
-  };
   let scrollDown = () => {
     window.addEventListener("scroll", () => {
+      let arrows = document.querySelector(".borderArrows");
       if (window.scrollY) {
-        document.querySelector(".fa-angle-double-down").classList.add("hide");
+        arrows.classList.add("hide");
       } else {
-        document
-          .querySelector(".fa-angle-double-down")
-          .classList.remove("hide");
+        arrows.classList.remove("hide");
       }
     });
   };
@@ -32,7 +23,9 @@ const Header = () => {
         <img className="logoImg" src={logoImg} alt="portret" />
         <h1>Tymoteusz Hryniewiecki</h1>
         <h2>Web developer</h2>
-        <i className="fas fa-angle-double-down"></i>
+        <div className="borderArrows">
+          <i className="fas fa-angle-double-down"></i>
+        </div>
       </header>
     </>
   );

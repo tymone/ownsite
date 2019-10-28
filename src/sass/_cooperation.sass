@@ -224,8 +224,13 @@
         top: 0
 
   p.under
-    position: static
+    position: relative
+    left: -100%
     padding-top: 50px
+    transition: 1s 4s
+
+    &.active
+      left: 0
 
 @media (max-width: 1024px)
   .cooperation
