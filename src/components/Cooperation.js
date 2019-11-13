@@ -24,7 +24,7 @@ export default class Cooperation extends Component {
 
   scroll = () => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 2000) {
+      if (window.scrollY > 1800) {
         let handleActive = document.querySelectorAll(
           ".cooperation .handleActive"
         );

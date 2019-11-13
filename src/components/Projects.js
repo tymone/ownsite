@@ -24,6 +24,7 @@ export default class Projects extends Component {
   };
 
   handleHover = () => {
+    if(window.innerWidth > 701){
     const link = document.querySelector(".project img");
     const handleHover = document.querySelector(".handleHover");
 
@@ -34,6 +35,7 @@ export default class Projects extends Component {
     handleHover.addEventListener("mouseleave", () => {
       handleHover.classList.remove("active");
     });
+  }
   };
 
   render() {

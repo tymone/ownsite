@@ -76,36 +76,78 @@
             color: white
 
 
-
-@media (max-width: 1024px)
+@media (max-width: 900px)
   .project
-    height: 476px
-
-
-@media (max-width: 767px)
-  .project
-    height: 385px
-
     .bodySection
-      display: flex
-      flex-wrap: wrap
+      h2.active
+        left: 40%
+        width: 59%
 
-    a
-      width: 100%
-      padding: 0 40px
-
-    p
-      width: 100%
-      padding: 0 40px
-
-@media (max-width: 425px)
+@media (max-width: 700px)
   .project
-    height: 566px
+    .bodySection
+      &::before
+        top: 12%
+        left: 50%
+        transform: translateX(-50%)
+        width: 50%
+        height: 37%
 
-@media (max-width: 375px)
-  .project
-    height: 561px
+      h2.active
+        width: 100%
+        left: 0
 
-@media (max-width: 320px)
+      p
+        position: relative
+        
+        width: 50%
+        right: -900px
+        margin: auto
+        padding: 0 0 0 40px
+        font-size: 24px
+        transition: 1s  .4s
+
+        &.active
+          right: 0
+      
+      .imgContainer
+        position: relative
+        top: 0
+        left: 0%
+        width: 40%
+        margin: 30px auto 100px auto
+
+        img
+          left: -300%
+
+        .handleHover
+          display: block
+          position: absolute
+          top: 100%
+          left: 0
+          width: 100%
+          background-color: rgba(0, 0, 0, 0.8)
+
+          a
+            position: relative
+            left: 20%
+            font-size: 30px
+            margin: 0 25px
+            color: white
+      
+
+@media (max-width: 660px)
   .project
-    height: 578px
+    .bodySection
+      &::before
+        height: 40vw
+
+      .imgContainer
+        .handleHover
+          a
+            left: 25%
+            font-size: 20px
+            margin: 0
+
+            &:nth-of-type(2)
+              left: 50%

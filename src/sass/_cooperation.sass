@@ -1,5 +1,5 @@
 .cooperation
-  min-height: 713px
+  min-height: 650px
 
   h2
     text-align: center
@@ -54,8 +54,9 @@
     .fas
       font-size: 0
       color: black
+      position: relative
       width: 25%
-      transform: translate(45%, -7px)
+      transform: translate(44%, -7px)
       transition: .7s 1.5s
 
       &.active
@@ -78,7 +79,6 @@
 
       img
         margin: auto
-        filter: grayscale(100%)
         position: relative
         width: 80px
         padding: 5px 5px
@@ -232,25 +232,68 @@
     &.active
       left: 0
 
-@media (max-width: 1024px)
+@media (max-width: 1300px)
   .cooperation
-    height: 528px
+    .bodySection
+      .stackContainer
+        .front-endContainer, .back-endContainer, .dbContainer, .versionControl
+          width: 24%
 
-@media (max-width: 767px)
+@media (max-width: 1140px)
   .cooperation
-    height: 421px
+    .bodySection
+      .arrows
+        .fas
+          transform: translate(43%, -7px)
+      .stackContainer
+        .logoContainer
+          height: 70%
 
-    .photo
-      display: none
+          img
+            width: 60px
 
-@media (max-width: 425px)
+@media (max-width: 900px)
   .cooperation
-    height: 451px
+    .bodySection
+      p.handleActive
+        width: 100%
+      .arrows
+        .fas
+          transform: translate(41%, -7px)
+      .stackContainer
+        .logoContainer
+          padding: 0px
+          height: 60%
 
-@media (max-width: 375px)
-  .cooperation
-    height: 523px
+          img
+            width: 40px
+            padding: 1px 1px
 
-@media (max-width: 320px)
+      p.under
+        padding-top: 30px
+  
+
+@media (max-width: 700px)
   .cooperation
-    height: 643px
+    .bodySection
+      .arrows
+        height: 130px
+        .fas
+          transform: translate(40%, -7px)
+
+@media (max-width: 660px)
+  .cooperation
+    .bodySection
+      .arrows
+        display: none
+      .stackContainer
+        .front-endContainer, .back-endContainer, .dbContainer, .versionControl
+          width: 60%
+          margin: 20px 0
+          height: 190px
+        
+        .logoContainer
+          height: 80%
+
+          img
+            width: 60px

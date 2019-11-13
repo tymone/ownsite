@@ -1,9 +1,7 @@
 .about
-  min-height: 650px
-  
+  min-height: 650px 
   .bodySection
     border-left: 2px solid black
-
     h2
       position: relative
       left: -100%
@@ -12,10 +10,8 @@
       padding-left: 60px
       font-size: 50px
       transition: 1s
-
       &.active
         left: 0
-
 
     img
       position: relative
@@ -23,7 +19,6 @@
       right: -700px
       width: 50%
       transition: 1s 1s
-
       &.active
         margin: auto
         padding: 0 20px
@@ -36,9 +31,25 @@
       bottom: -900px
       font-size: 24px
       padding: 0 60px
-      transition: 3s 1s
+      transition: 3s .5s
       text-align: left
-      
       &.active
-        width: 50%
         bottom: 0
+
+@media (max-width: 1110px)
+  .about
+    min-height: 350px
+    .bodySection
+      h2
+        padding-left: 30px
+      
+      p
+        padding: 0 20px
+
+@media (max-width: 900px)
+  .about
+    .bodySection
+      border-left: none
+
+      img
+        width: 50%

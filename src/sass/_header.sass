@@ -9,13 +9,13 @@ header
     left: 0
     bottom: 0
     
-
   h1
     position: absolute
     text-transform: uppercase
     top: 25%
     left: 55%
     font-size: 70px
+    padding-right: 20px
     color: #848383
 
   h2
@@ -30,7 +30,7 @@ header
     width: 50px
     height: 60px
     bottom: 50px
-    right: 31vw
+    right: 25vw
     border: 2px solid #848383
     border-radius: 20px
     overflow: hidden
@@ -54,10 +54,8 @@ header
   100%
     top: 150%
 
-@media (max-width: 1200px)
+@media (max-width: 1110px)
   header
-    .logoImg
-      height: 90%
 
     h1
       top: 20%
@@ -65,24 +63,41 @@ header
       font-size: 60px
 
     h2
-      top: 40%
+      top: 45%
       left: 50%
 
 @media (max-width: 900px)
+  header
+    .logoImg
+      height: 100%
+      left: 0%
+    
+    h1
+      top: 15%
+      left: 50%
+      font-size: 48px
+    
+    h2
+      top: 35%
+      left: 50%
+
+@media (max-width: 700px)
   header
     .logoImg
       height: 80%
       left: 50%
       transform: translateX(-50%)
     
+    .borderArrows
+      right: 10vw
+
     h1
       top: 10%
       left: 0
       width: 100%
-      padding: 0 20px
       text-align: center
-      font-size: 50px
-    
+      padding-left: 20px
+
     h2
       top: 20%
       left: 0
@@ -90,29 +105,28 @@ header
       text-align: center
 
 
-@media (max-width: 600px)
+@media (max-width: 660px)
   header
-    .logoImg
-      width: 100%
-      height: auto
 
     h1
-      top: 5%
-      font-size: 40px
-
-    h2
       top: 10%
-
-@media (max-width: 560px)
-  header
-    h1
       font-size: 30px
 
-@media (max-width: 450px)
+    h2
+      top: 15%
+      font-size: 20px
+
+@media (max-width: 430px)
   header
     h1
-      top: 40px
+      font-size: 26px
+
+@media (max-width: 375px)
+  header
+
+    .borderArrows
+      right: 5vw
 
     h2
-      top: 110px
+      top: 20%
       font-size: 20px

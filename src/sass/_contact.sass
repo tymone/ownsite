@@ -95,7 +95,7 @@
         color: #848383
 
   .contactRightSide
-    padding: 0 100px 50px 100px
+    padding: 0 0 50px 80px
     width: 40%
     display: flex
     flex-direction: column
@@ -107,7 +107,6 @@
       text-align: left
       text-transform: uppercase
       font-size: 26px
-      // transition: 1s
 
       &:nth-of-type(1)
         transition: 1s .3s
@@ -185,54 +184,11 @@
           color: #848383
 
 
-@media (max-width: 1024px)
+@media (max-width: 900px)
   .contact
-    height: 646px
-
-@media (max-width: 825px)
-  .contact
-    height: 613px
-
     .bodySection
-
-      form
-        width: 60%
-
-@media (max-width: 690px)
-  .contact
-
-    .bodySection
-
-      form
-        width: 70%
-
-@media (max-width: 590px)
-  .contact
-
-    .bodySection
-
-      form
-        width: 80%
-
-@media (max-width: 520px)
-  .contact
-
-    .bodySection
-
-      form
-        width: 90%
-
-@media (max-width: 470px)
-  .contact
-    
-    .bodySection
-
       form
         width: 100%
 
-        input, textarea
-          font-size: 20px
-
-@media (max-width: 425px)
-  .contact
-    height: 582px
+      .contactRightSide
+        display: none

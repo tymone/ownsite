@@ -7,7 +7,7 @@ export default class Contact extends Component {
     class: "contact",
     name: "",
     email: "",
-    message: ""
+    message: "",
   };
 
   componentDidMount() {
@@ -62,7 +62,7 @@ export default class Contact extends Component {
 
   scroll = () => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 2800) {
+      if (window.scrollY > 2400) {
         let handleActive = document.querySelectorAll(".contact .handleActive");
 
         handleActive.forEach(item => item.classList.add("active"));
